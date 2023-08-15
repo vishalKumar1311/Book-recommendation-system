@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{% static '/css/style.css'%}">
+   <title>Recommendation</title>
+</head>
+<body>
+   <section>
+      <div class="nav-bar">
+          <h3 class="nav-head">Book Recommend System</h3>
+          <ul>
+              <li>Poupular</li>
+              <li><a href="{% url 'recommend' %}">Recommend</a></li>
+          </ul>
+      </div>
+  </section> 
+
+   <form action="/recommend_books/" method="POST">
+      {% csrf_token %}
+      <div class="search">
+      <input type="text" name="bookname" id="">
+      <button type="submit" class="button">Recommend</button>
+   </div>
+   </form>
+   <section class="product">
+      <div class="product-slider">
+                         
+             {% if data %}
+             {% for i in data %} 
+             <div class="box">
+                 <img src="{{i.2}}" alt="">
+                        <p >{{i.0}}</p> 
+                        <div class="detail">
+                            <div class="author">
+                                <h4>{{i.1}}</h4>
+                            </div>                          
+                        </div>
+             </div>
+            {% endfor %}
+            {% endif %}
+             
+         
+      </div>
+   </section>
+</body>
+</html>

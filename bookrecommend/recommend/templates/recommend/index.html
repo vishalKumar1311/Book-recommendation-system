@@ -1,0 +1,54 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static '/css/style.css'%}">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    </head>
+    <body>
+    
+        <section>
+            <div class="nav-bar">
+                <h3 class="nav-head">Book Recommend System</h3>
+                <ul>
+                    <li>Poupular</li>
+                    <li><a href="{% url 'recommend' %}">Recommend</a></li>
+                </ul>
+            </div>
+        </section>   
+ 
+        <section class="product" id="product">
+            
+          
+             <div class="product-slider">
+               
+                    {% for i,j,k,l in mylist %}  
+                    <div class="box">
+                        <img src="{{i}}" alt="">
+                        <p >{{j}}</p> 
+                        <div class="detail">
+                            <div class="author">
+                                <h5>{{k}}</h5>
+                            </div>                          
+                          <div class="r">
+                            <h5>{{l}}</h5>
+                          </div>
+                        </div>
+                       
+                        
+                    </div>
+                    {% endfor %}
+                    
+               
+             </div>
+            
+            
+                   
+                    
+                
+            
+        </section>
+     
+        
+
+    </body>
+    </html>

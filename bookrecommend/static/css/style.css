@@ -1,0 +1,148 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+body{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+
+
+.product-slider{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center; 
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    height: 4rem;
+    margin-bottom:5rem ;
+    background-color: #24252A;
+}
+.nav-bar ul{
+    display: flex;
+    align-items: center;
+   
+}
+.nav-bar ul li{
+    margin-left: 2rem;
+    margin-right: 5rem;
+    font-size: larger;
+}
+.nav-head{
+    margin-right: 1rem;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+
+.menu li a{
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+.product-slider .box{
+    background-color: #fff;
+    width: 10%;
+    height: 18rem;
+    margin: 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 2rem 2rem;
+    outline: .1rem solid rgba(0, 0, 0, .1);
+    outline-offset: -1rem;
+    box-shadow:0 .5rem 1rem rgba(0, 0, 0, .1);
+    transition: .2s linear;
+}
+
+.product-slider .box .detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 1rem;
+}
+
+ .product-slider .box img{
+    height: 12rem;
+}
+
+.product-slider .box h3{
+    padding-top: 1rem;
+    text-align: center;
+    width: 180px;
+ }
+
+ 
+
+form .search input{
+    width: 20rem;
+    background: #eee;
+    outline: none;
+    height: 2.5rem; 
+    border: none;
+    padding-left:1.5rem ;
+  
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center; 
+}
+
+ .search{
+    background: #eee;
+     padding:10px 0px 10px 0px;
+     border-radius:5px 10px 10px 5px;
+     height: 1.2rem;
+     border:0 none;
+     width:30rem;
+     display: flex;
+     justify-content: flex-end;
+     flex-direction: row;
+     align-items: center;
+}
+
+form .search .button {
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  outline: none;
+  padding: 5px 1em;
+  text-align: center;
+ 
+
+ 
+}
+
+form .search .button:hover
+ {
+  background-color: #07c;
+}
+
+form .search .button:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}
+
+
